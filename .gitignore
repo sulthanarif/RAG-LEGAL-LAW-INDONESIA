@@ -30,6 +30,8 @@ data/trash/
 data/processed_chunks*.json
 data/*report*.json
 data/*failures*.json
+data/*typo*.jsonl
+data/*typo_corrected*.json
 data/processing_report.csv
 
 # Vector DB / retrieval indexes

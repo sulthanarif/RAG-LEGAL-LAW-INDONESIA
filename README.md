@@ -181,6 +181,48 @@ data/processed_chunks_ringan_pasal_chroma_report.json
 
 File `*_chroma_ready.json` adalah file final yang dipakai notebook ingestion dan retrieval.
 
+Tahap finalisasi juga menjalankan cleanup deterministik untuk typo OCR umum sebelum data masuk Chroma, misalnya `RAT{MAT` -> `RAHMAT`, `KNRTU` -> `KARTU`, `KEHI1,ANGAN` -> `KEHILANGAN`, dan normalisasi `Pasal Ii` -> `Pasal II`. Header display juga dipendekkan agar preview retrieval tidak penuh judul `tentang ...` yang panjang.
+
+### 4. Opsional: Local LLM Typo Correction
+
+Kalau typo OCR masih banyak, jalankan koreksi berbasis model kecil setelah finalisasi. Script ini membaca file Chroma-ready dan menulis file baru, sehingga artifact asli tidak ketimpa. Default-nya memakai model lokal via `transformers`, bukan API.
+
+Test 10 chunk dulu di GPU RTX 3090:
+
+```powershell
+python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --limit 10 --max-new-tokens 2048
+```
+
+Full run lokal:
+
+```powershell
+python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --max-new-tokens 2048
+```
+
+Kalau VRAM mepet, pakai 4-bit:
+
+```powershell
+python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --load-in-4bit --max-new-tokens 2048
+```
+
+Output default:
+
+```text
+data/processed_chunks_ringan_pasal_chroma_ready_typo_corrected.json
+data/llm_typo_correction_cache.jsonl
+```
+
+Setelah itu ingestion Chroma bisa diarahkan ke file `*_typo_corrected.json`.
+
+Catatan: `--max-new-tokens` default script memang menerima nilai besar, tetapi untuk chunk final saat ini rata-rata sudah dipotong sampai sekitar 450 kata. Untuk koreksi typo, `2048` atau `4096` biasanya jauh lebih cepat dan cukup. Nilai `100000` hampir pasti lambat/OOM/ditolak karena Qwen 2.5 7B tidak punya output budget sebesar itu dalam praktik.
+
+Alternatif lokal via Ollama:
+
+```powershell
+ollama pull qwen2.5:7b-instruct
+python .\llm_typo_correct_chroma_ready.py --provider ollama --model qwen2.5:7b-instruct --max-new-tokens 2048
+```
+
 ## Format Chunk Final
 
 Setiap chunk final berisi field utama:
@@ -265,7 +307,7 @@ python .\paddle_ocr_extract.py --device gpu:0
 python .\finalize_chunks_for_chroma.py
 ```
 
-Setelah tahap 4 selesai, data siap dimasukkan ke ChromaDB.
+Setelah tahap finalisasi selesai, data siap dimasukkan ke ChromaDB. Kalau memakai LLM typo correction, gunakan file `data/processed_chunks_ringan_pasal_chroma_ready_typo_corrected.json` sebagai input ingestion.
 
 ## GitHub Notes
 

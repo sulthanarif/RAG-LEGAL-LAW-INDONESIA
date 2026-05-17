@@ -201,6 +201,7 @@ def finalize_chunks(args: argparse.Namespace) -> Dict:
             continue
 
         content, trimmed = trim_attached_appendix(chunk.get("text", ""))
+        content = prep.clean_extracted_text(content)
         if trimmed:
             appendix_trim_count += 1
         if not content.strip():

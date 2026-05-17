@@ -81,9 +81,71 @@ def normalize_ocr_number_token(token: str) -> str:
     return token.translate(str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "L": "1", "|": "1"}))
 
 
+def normalize_mixed_year_token(token: str) -> str:
+    return token.translate(str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "L": "1", "|": "1"}))
+
+
 def _fix_split_numlist(match: re.Match) -> str:
     leading, d1, d2 = match.group(1), match.group(2), match.group(3)
     return f"{leading}{d2}. " if d1 == d2 else f"{leading}{d1}{d2}. "
+
+
+OCR_WORD_FIXES = [
+    (r"\bRAT[\{\(]?\s*MAT\b", "RAHMAT"),
+    (r"\bRAIIMAT\b", "RAHMAT"),
+    (r"\bRAHMATTUHAN\b", "RAHMAT TUHAN"),
+    (r"\bTUIIAN\b", "TUHAN"),
+    (r"\bKNRTU\b", "KARTU"),
+    (r"\bKNRJA\b", "KERJA"),
+    (r"\bK[EO]RJA\b", "KERJA"),
+    (r"\bK[EO]RJAAN\b", "KERJAAN"),
+    (r"\bK[EO]R['`^]?AAN\b", "KERJAAN"),
+    (r"\bP[EO]K[EO]RJA\b", "PEKERJA"),
+    (r"\bP[EO]K[EO]RJAAN\b", "PEKERJAAN"),
+    (r"\bP[EO]K[EO]R['`^]?AAN\b", "PEKERJAAN"),
+    (r"\bP[EO]K[EO]DA\b", "PEKERJA"),
+    (r"\bMEWR\s*:\s*JUDKAN\b", "MEWUJUDKAN"),
+    (r"\bMEW[RU][:\s]*JUDKAN\b", "MEWUJUDKAN"),
+    (r"\bBURUII\b", "BURUH"),
+    (r"\bKEHI[1IIL][,\.]?\s*ANGAN\b", "KEHILANGAN"),
+    (r"\bKEHI[1IIL]ANGAN\b", "KEHILANGAN"),
+    (r"\bPR[AO]KERJA\b", "PRAKERJA"),
+    (r"\bPERPR[EO]S\b", "PERPRES"),
+    (r"\bN[O0]M[O0]R\b", "NOMOR"),
+    (r"\bM[O0]R\b(?=\s+TAHUN)", "NOMOR"),
+    (r"\bPRES\s+IDEN\b", "PRESIDEN"),
+    (r"\bLIMA\s*-\s*LIMA\b", "LIMA"),
+    (r"\b[1Il|]{2}MA\s*-\s*LIMA\b", "LIMA"),
+    (r"\b[1Il|]IMA\s*-\s*LIMA\b", "LIMA"),
+]
+
+
+def _case_like(original: str, replacement: str) -> str:
+    letters = re.sub(r"[^A-Za-z]", "", original)
+    if letters and letters.isupper():
+        return replacement.upper()
+    if letters and letters.islower():
+        return replacement.lower()
+    if letters and letters[:1].isupper() and letters[1:].islower():
+        return replacement.title()
+    return replacement
+
+
+def normalize_common_ocr_words(text: str) -> str:
+    for pattern, replacement in OCR_WORD_FIXES:
+        text = re.sub(pattern, lambda m, r=replacement: _case_like(m.group(0), r), text, flags=re.IGNORECASE)
+    text = re.sub(r"\bKartu\s+Prakerja\b", "Kartu Prakerja", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bProgram\s+Kartu\s+Prakerja\b", "Program Kartu Prakerja", text, flags=re.IGNORECASE)
+    text = re.sub(r"\b(\d{1,3})\s*(?:o/o|olo)\b", r"\1%", text, flags=re.IGNORECASE)
+    text = re.sub(r"\b2[oO](?=\d{2}\b)", "20", text)
+    text = re.sub(r"\b(19|20)[0-9OoIlL|]{2}\b", lambda m: normalize_mixed_year_token(m.group(0)), text)
+    text = re.sub(r"(?im)^\s*Pasal\s+[lLiI|]\s*$", "Pasal 1", text)
+    text = re.sub(r"\bPasal\s+[l|]\b", "Pasal 1", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bPasal\s+i\b", "Pasal 1", text)
+    text = re.sub(r"\bPasal\s+([ivxlcdm]+)\b", lambda m: f"Pasal {m.group(1).upper()}", text, flags=re.IGNORECASE)
+    text = re.sub(r"(?<=[A-Za-z])['`^](?=[A-Za-z])", "", text)
+    text = re.sub(r"(?<=[A-Za-z]),(?=[A-Za-z]{3,})", "", text)
+    return text
 
 
 def normalize_legal_text(text: str) -> str:
@@ -101,6 +163,7 @@ def normalize_legal_text(text: str) -> str:
     text = re.sub(r"\bB\s*A\s*B\b", "BAB", text, flags=re.IGNORECASE)
     text = re.sub(r"\bT\s*E\s*N\s*T\s*A\s*N\s*G\b", "TENTANG", text, flags=re.IGNORECASE)
     text = re.sub(r"\bM\s*E\s*M\s*U\s*T\s*U\s*S\s*K\s*A\s*N\b", "MEMUTUSKAN", text, flags=re.IGNORECASE)
+    text = normalize_common_ocr_words(text)
     return text
 
 
@@ -439,6 +502,17 @@ def extract_metadata(filepath: Path, text_content: str) -> Dict:
         else:
             nomor, year = extract_nomor_year_from_filename(filename)
 
+    filename_nomor, filename_year = extract_nomor_year_from_filename(filename)
+    if filename_nomor and (
+        not nomor
+        or nomor.lower() == "unknown"
+        or not re.search(r"\d", str(nomor))
+        or str(nomor).upper() in {"MOR", "NOR", "NOMOR", "NO"}
+    ):
+        nomor = filename_nomor
+    if filename_year and (not year or int(year) == 0):
+        year = filename_year
+
     if nomor and re.search(r"\bPER[.\-/]?\d{1,4}.*\bMEN\b", nomor, re.IGNORECASE):
         regulation_type = "Peraturan Menteri"
     if re.search(r"\bMENTERI\s+(TENAGA\s+KERJA|KETENAGAKERJAAN|TENAGA\s+KERJA\s+DAN\s+TRANSMIGRASI)\b", head_text, re.IGNORECASE):
@@ -597,8 +671,6 @@ def estimate_token_count(text: str) -> int:
 
 def build_display_text(metadata: Dict, pasal_id: str, content: str, ctx: SectionContext) -> str:
     header = f"{metadata['regulation_type']} No. {metadata['nomor']} Tahun {metadata['publication_year']}"
-    if metadata.get("tentang") and metadata["tentang"] != "Unknown":
-        header += f" tentang {metadata['tentang']}"
     parts = [header]
     if ctx.bab:
         parts.append(f"{ctx.bab}" + (f" - {ctx.bab_title}" if ctx.bab_title else ""))

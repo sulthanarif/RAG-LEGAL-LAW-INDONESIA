@@ -440,8 +440,6 @@ def split_pasals(text: str) -> Iterable[Tuple[int, str, str]]:
 
 def build_display_text(metadata: Dict, pasal_id: str, content: str, ctx: SectionContext) -> str:
     header = f"{metadata['regulation_type']} No. {metadata['nomor']} Tahun {metadata['publication_year']}"
-    if metadata.get("tentang") and metadata["tentang"] != "Unknown":
-        header += f" tentang {metadata['tentang']}"
     parts = [header]
     if ctx.bab:
         parts.append(f"{ctx.bab}" + (f" - {ctx.bab_title}" if ctx.bab_title else ""))
