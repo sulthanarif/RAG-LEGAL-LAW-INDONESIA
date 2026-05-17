@@ -208,9 +208,12 @@ class TransformersCaller:
 
         model = args.model
         device = args.device
+        load_in_4bit = args.load_in_4bit or (args.auto_4bit_7b and re.search(r"(^|[-_/])7b($|[-_/])", model, re.IGNORECASE))
+        if load_in_4bit:
+            print(f"Loading {model} in 4-bit.", flush=True)
         self.tokenizer = AutoTokenizer.from_pretrained(model, trust_remote_code=True)
         quantization_config = None
-        if args.load_in_4bit:
+        if load_in_4bit:
             try:
                 from transformers import BitsAndBytesConfig
             except ImportError as exc:
@@ -310,6 +313,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model", default="Qwen/Qwen2.5-7B-Instruct")
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--load-in-4bit", action="store_true", help="Load local Transformers model in 4-bit to save VRAM.")
+    parser.add_argument("--no-auto-4bit-7b", dest="auto_4bit_7b", action="store_false", help="Disable automatic 4-bit loading for 7B models.")
+    parser.set_defaults(auto_4bit_7b=True)
     parser.add_argument("--torch-dtype", choices=["auto", "float16", "bfloat16", "float32"], default="float16")
     parser.add_argument("--attn-implementation", default="sdpa", help="Use sdpa or flash_attention_2 when available.")
     parser.add_argument("--max-new-tokens", type=int, default=100000)

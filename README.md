@@ -193,13 +193,15 @@ Test 10 chunk dulu di GPU RTX 3090:
 python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --limit 10 --max-new-tokens 2048
 ```
 
+Untuk model 7B, script otomatis load 4-bit agar lebih ringan di GPU 24GB. Kalau ingin mematikan perilaku ini, tambahkan `--no-auto-4bit-7b`.
+
 Full run lokal:
 
 ```powershell
 python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --max-new-tokens 2048
 ```
 
-Kalau VRAM mepet, pakai 4-bit:
+Kalau pakai model selain 7B dan VRAM mepet, pakai 4-bit eksplisit:
 
 ```powershell
 python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --load-in-4bit --max-new-tokens 2048
