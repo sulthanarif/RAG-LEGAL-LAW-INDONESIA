@@ -1,0 +1,18 @@
+# ============================================================
+# PaddleOCR GPU install override
+#
+# Install setelah requirements.txt:
+#   python -m pip uninstall -y paddlepaddle
+#   python -m pip install -r requirements-paddle-gpu.txt
+#
+# Cek:
+#   python -c "import paddle; print(paddle.device.is_compiled_with_cuda()); print(paddle.device.get_device())"
+#
+# Catatan:
+# - Ini pakai wheel resmi Paddle CUDA 11.8 untuk Windows/Python.
+# - Jangan install paddlepaddle CPU dan paddlepaddle-gpu barengan.
+# ============================================================
+
+--extra-index-url https://www.paddlepaddle.org.cn/packages/stable/cu118/
+paddlepaddle-gpu==3.2.0
+paddleocr==3.5.0

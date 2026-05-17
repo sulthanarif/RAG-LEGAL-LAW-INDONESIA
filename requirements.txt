@@ -1,0 +1,52 @@
+# ============================================================
+# Install:
+#   python -m pip install -r requirements.txt
+#
+# Notes:
+# - PyTorch CUDA tidak otomatis dari pip default. Kalau mau GPU NVIDIA,
+#   install torch sesuai CUDA dari https://pytorch.org/get-started/locally/
+#   sebelum/atau setelah requirements ini.
+# - pytesseract hanya Python wrapper. Install juga Tesseract OCR binary
+#   di OS kalau menjalankan script OCR lama / rename_pdfs.py.
+# - Default file ini memakai PaddleOCR CPU. Kalau mau PaddleOCR GPU,
+#   install requirements-paddle-gpu.txt setelah file ini.
+# ============================================================
+
+# Core RAG / LLM
+torch
+transformers>=4.40.0
+accelerate
+bitsandbytes
+sentence-transformers
+
+# Vector database / retrieval
+chromadb
+rank-bm25
+
+# PDF extraction / OCR / document parsing
+pymupdf
+pdfplumber
+docling
+paddlepaddle==3.2.0
+paddleocr
+pillow
+pytesseract
+easyocr
+opencv-python
+
+# Evaluation / notebooks / data
+datasets
+ragas
+pandas
+numpy
+tqdm
+scikit-learn
+
+# Scraping / utilities
+requests
+beautifulsoup4
+pyyaml
+python-dotenv
+
+# Local demo app
+flask

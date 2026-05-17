@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw legal documents and OCR outputs
+data/pdf_butuh_ocr/
+data/raw_text_paddle/
+data/raw_text_ringan/
+data/trash/
+
+# Generated preprocessing artifacts
+data/processed_chunks*.json
+data/*report*.json
+data/*failures*.json
+data/processing_report.csv
+
+# Vector DB / retrieval indexes
+chroma/
+chroma_db/
+chromadb/
+data/chroma/
+data/chroma_db/
+data/chromadb/
+*.sqlite
+*.sqlite3
+*.faiss
+*.index
+
+# Model/checkpoint/cache artifacts
+models/
+model/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.pdmodel
+*.pdiparams
+*.pdparams
+*.pdopt
+
+# Experiment outputs
+result/
+runs/
+wandb/
+mlruns/
+outputs/
+logs/
+*.log
+
+# Backups / local-only snapshots
+backup_dari_vast/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
