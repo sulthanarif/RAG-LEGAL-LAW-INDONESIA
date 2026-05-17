@@ -48,6 +48,26 @@ Aturan wajib:
 """
 
 
+SUSPICIOUS_PATTERNS = [
+    r"o/o\b",
+    r"olo\b",
+    r"\b2[oO][0-9IlL|]{2}\b",
+    r"\b(19|20)[0-9OoIlL|]{2}\b",
+    r"\bPRES\s+IDEN\b",
+    r"\bRAT[\{\(]?\s*MAT\b",
+    r"\bMEWR\s*:\s*JUDKAN\b",
+    r"\bKNRTU\b",
+    r"\bKEHI[1IIL][,\.]?\s*ANGAN\b",
+    r"\bP[EO]K[EO]R['`^]?AAN\b",
+    r"\b[1Il|]{2}MA\s*-\s*LIMA\b",
+    r"['`^](?=[A-Za-z])",
+    r"[{}~]",
+]
+
+
+SUSPICIOUS_RE = re.compile("|".join(f"(?:{p})" for p in SUSPICIOUS_PATTERNS), re.IGNORECASE)
+
+
 def compact_citation(meta: Dict[str, Any]) -> str:
     reg_type = str(meta.get("regulation_type") or "Aturan").strip()
     nomor = str(meta.get("nomor") or "").strip()
@@ -283,6 +303,8 @@ def should_process(chunk: Dict[str, Any], args: argparse.Namespace) -> bool:
     if args.only_needs_review and chunk.get("metadata", {}).get("quality_status") != "needs_review":
         return False
     text = chunk.get("text", "")
+    if args.only_suspicious_text and not SUSPICIOUS_RE.search(text):
+        return False
     if len(text.split()) < args.min_words:
         return False
     return True
@@ -304,6 +326,18 @@ def update_chunk(chunk: Dict[str, Any], corrected_text: str) -> Dict[str, Any]:
     return updated
 
 
+def deterministic_update_chunk(chunk: Dict[str, Any]) -> Dict[str, Any]:
+    cleaned = prep.clean_extracted_text(chunk.get("text", ""))
+    if cleaned == chunk.get("text", ""):
+        return chunk
+    updated = update_chunk(chunk, cleaned)
+    meta = dict(updated.get("metadata", {}))
+    meta["deterministic_typo_corrected"] = True
+    meta["llm_typo_corrected"] = False
+    updated["metadata"] = meta
+    return updated
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Correct OCR typos in Chroma-ready chunks using a small LLM.")
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
@@ -317,7 +351,7 @@ def parse_args() -> argparse.Namespace:
     parser.set_defaults(auto_4bit_7b=True)
     parser.add_argument("--torch-dtype", choices=["auto", "float16", "bfloat16", "float32"], default="float16")
     parser.add_argument("--attn-implementation", default="sdpa", help="Use sdpa or flash_attention_2 when available.")
-    parser.add_argument("--max-new-tokens", type=int, default=100000)
+    parser.add_argument("--max-new-tokens", type=int, default=2048)
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--timeout", type=int, default=600)
     parser.add_argument("--limit", type=int)
@@ -325,6 +359,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sleep", type=float, default=0.0)
     parser.add_argument("--min-words", type=int, default=1)
     parser.add_argument("--only-needs-review", action="store_true")
+    parser.add_argument("--only-suspicious-text", action="store_true", help="Only send chunks matching common OCR typo patterns to the LLM.")
     parser.add_argument("--overwrite", action="store_true", help="Allow output path to equal input path.")
     return parser.parse_args()
 
@@ -334,7 +369,7 @@ def main() -> None:
     if args.input == args.output and not args.overwrite:
         raise SystemExit("Output sama dengan input. Pakai --overwrite kalau memang mau menimpa.")
     if args.max_new_tokens >= 100000:
-        print("Warning: max_new_tokens=100000 belum tentu didukung model/provider. Script tetap meneruskan nilai ini.")
+        print("Warning: max_new_tokens=100000 sangat lambat dan belum tentu didukung model/provider.")
 
     chunks = json.loads(args.input.read_text(encoding="utf-8"))
     cache = load_cache(args.cache)
@@ -354,7 +389,7 @@ def main() -> None:
             continue
 
         if not should_process(chunk, args):
-            output.append(chunk)
+            output.append(deterministic_update_chunk(chunk))
             continue
 
         processed += 1

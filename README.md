@@ -190,7 +190,7 @@ Kalau typo OCR masih banyak, jalankan koreksi berbasis model kecil setelah final
 Test 10 chunk dulu di GPU RTX 3090:
 
 ```powershell
-python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --limit 10 --max-new-tokens 2048
+python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --only-suspicious-text --limit 10
 ```
 
 Untuk model 7B, script otomatis load 4-bit agar lebih ringan di GPU 24GB. Kalau ingin mematikan perilaku ini, tambahkan `--no-auto-4bit-7b`.
@@ -198,8 +198,10 @@ Untuk model 7B, script otomatis load 4-bit agar lebih ringan di GPU 24GB. Kalau 
 Full run lokal:
 
 ```powershell
-python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --max-new-tokens 2048
+python .\llm_typo_correct_chroma_ready.py --provider transformers --model Qwen/Qwen2.5-7B-Instruct --device cuda --only-suspicious-text
 ```
+
+Pakai `--only-suspicious-text` agar hanya chunk yang mengandung pola typo OCR dikirim ke LLM. Chunk lain tetap dibersihkan dengan normalizer deterministik tanpa inference model.
 
 Kalau pakai model selain 7B dan VRAM mepet, pakai 4-bit eksplisit:
 
@@ -216,7 +218,7 @@ data/llm_typo_correction_cache.jsonl
 
 Setelah itu ingestion Chroma bisa diarahkan ke file `*_typo_corrected.json`.
 
-Catatan: `--max-new-tokens` default script memang menerima nilai besar, tetapi untuk chunk final saat ini rata-rata sudah dipotong sampai sekitar 450 kata. Untuk koreksi typo, `2048` atau `4096` biasanya jauh lebih cepat dan cukup. Nilai `100000` hampir pasti lambat/OOM/ditolak karena Qwen 2.5 7B tidak punya output budget sebesar itu dalam praktik.
+Catatan: `--max-new-tokens` default script adalah `2048`. Untuk chunk final saat ini rata-rata sudah dipotong sampai sekitar 450 kata, jadi ini jauh lebih cepat dan cukup untuk koreksi typo. Nilai `100000` hampir pasti lambat/OOM/ditolak karena Qwen 2.5 7B tidak punya output budget sebesar itu dalam praktik.
 
 Alternatif lokal via Ollama:
 
