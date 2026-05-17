@@ -456,8 +456,6 @@ def build_display_text(metadata: Dict, pasal_id: str, content: str, ctx: Section
 
 def build_citation_text(metadata: Dict, pasal_id: str) -> str:
     reg = f"{metadata['regulation_type']} No. {metadata['nomor']} Tahun {metadata['publication_year']}"
-    if metadata.get("tentang") and metadata["tentang"] != "Unknown":
-        reg += f" tentang {metadata['tentang']}"
     return f"{reg}, {pasal_id}"
 
 

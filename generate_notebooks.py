@@ -120,7 +120,7 @@ def setup_chromadb(db_path: str = "./chroma_db", collection_name: str = "hukum_k
     return collection
 
 class BM25Index:
-    def __init__(self, index_path: str = "./bm25_index.pkl"):
+    def __init__(self, index_path: str = "../data/bm25_index.pkl"):
         self.index_path = index_path
         self.bm25 = None
         self.corpus_ids = []
@@ -186,7 +186,7 @@ def store_chunks_hybrid(collection, bm25_index: BM25Index, chunks: List[Dict], b
         pasal = meta.get('pasal_id', '')
         
         if not meta.get('citation_text'):
-            meta['citation_text'] = f"{reg_type} No. {nomor} Tahun {year} {pasal}"
+            meta['citation_text'] = f"{reg_type} No. {nomor} Tahun {year}, {pasal}"
             
         if not meta.get('regulation_hierarchy'):
             meta['regulation_hierarchy'] = hierarchy_map.get(reg_type, 5)
@@ -222,7 +222,7 @@ def store_chunks_hybrid(collection, bm25_index: BM25Index, chunks: List[Dict], b
     logger.info(f"Successfully stored {len(ids)} chunks in ChromaDB & BM25 Index.")"""),
     ("markdown", "## EKSEKUSI BATCH 1\nJalankan cell di bawah ini untuk memulai proses ke data Anda."),
     ("code", """# --- EXECUTION BLOCK ---
-data_path = "../data/processed_chunks_1b.json" # Match your backup script output
+data_path = "../data/processed_chunks_ringan_pasal_chroma_ready.json" # Chroma-ready chunks from finalize_chunks_for_chroma.py
 
 if os.path.exists(data_path):
     print(f"Loading data from {data_path}...")
@@ -289,7 +289,7 @@ class LegalEmbeddingPipeline:
         return self.embed_texts([query], prefix="query: ")[0]
 
 class BM25Index:
-    def __init__(self, index_path: str = "./bm25_index.pkl"):
+    def __init__(self, index_path: str = "../data/bm25_index.pkl"):
         self.index_path = index_path
         self.bm25 = None
         self.corpus_ids = []
@@ -598,7 +598,7 @@ class LegalEmbeddingPipeline:
         return self.embed_texts([query], prefix="query: ")[0]
 
 class BM25Index:
-    def __init__(self, index_path: str = "./bm25_index.pkl"):
+    def __init__(self, index_path: str = "../data/bm25_index.pkl"):
         self.index_path = index_path
         self.bm25 = None
         self.corpus_ids = []
@@ -766,7 +766,7 @@ def generate_answer(query: str):
     for doc in docs:
         meta = doc['metadata']
         clean_text = re.sub(r'[\\U0001F600-\\U0001F64F\\U0001F300-\\U0001F5FF\\U0001F680-\\U0001F6FF]+', '', doc['text'])
-        context_str += f"[SUMBER HUKUM: {meta.get('regulation_type', 'Aturan')} No. {meta.get('nomor','')} Tahun {meta.get('year', '-')} Pasal {meta.get('pasal_id', '')}]\\n{clean_text.strip()}\\n\\n"
+        context_str += f"[{meta.get('regulation_type', 'Aturan')} No. {meta.get('nomor','')} Tahun {meta.get('year', '-')}, {meta.get('pasal_id', '')}]\\n{clean_text.strip()}\\n\\n"
 
     system_prompt = (
         "Anda adalah Pakar Hukum Ketenagakerjaan Indonesia.\\n"

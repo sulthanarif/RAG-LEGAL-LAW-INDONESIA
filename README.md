@@ -50,11 +50,26 @@ python -m pip install -r requirements.txt
 
 Untuk PaddleOCR CPU, cukup install `requirements.txt`.
 
-Untuk PaddleOCR GPU, install base dulu lalu override Paddle CPU ke GPU:
+Untuk PaddleOCR GPU, paling aman pakai environment terpisah khusus OCR. Jangan campur Paddle GPU `cu118` dengan environment notebook RAG yang memakai Torch CUDA 12.x, karena library `nvidia-*` bisa bentrok dan membuat `import torch` gagal.
+
+Environment notebook/RAG:
 
 ```powershell
-python -m pip uninstall -y paddlepaddle
-python -m pip install -r requirements-paddle-gpu.txt
+python -m venv .venv-rag
+.\.venv-rag\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+Environment OCR GPU:
+
+```powershell
+python -m venv .venv-ocr
+.\.venv-ocr\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip uninstall -y paddlepaddle paddlepaddle-gpu
+python -m pip install --no-cache-dir --force-reinstall -r requirements-paddle-gpu.txt
 ```
 
 Cek Paddle GPU:
@@ -68,6 +83,17 @@ Output ideal:
 ```text
 True
 gpu:0
+```
+
+Kalau `pip install -r requirements-paddle-gpu.txt` bilang sudah installed tetapi script masih error `Paddle yang terinstall CPU build`, berarti package CPU masih kebaca oleh Python. Jalankan uninstall dua package di atas, lalu reinstall dengan `--force-reinstall`.
+
+Kalau setelah install Paddle GPU notebook gagal `import torch` dengan error `undefined symbol: ncclCommShrink`, berarti Paddle GPU dan Torch CUDA bentrok dalam satu environment. Solusinya pisahkan environment OCR dan RAG, atau reinstall Torch setelah pekerjaan OCR selesai.
+
+Kalau `import sentence_transformers` gagal karena `torchcodec` atau FFmpeg, hapus `torchcodec` dan pakai versi `sentence-transformers` yang dipin di requirements:
+
+```powershell
+python -m pip uninstall -y torchcodec
+python -m pip install --force-reinstall "sentence-transformers==3.4.1"
 ```
 
 ## Alur Preprocessing
@@ -185,7 +211,7 @@ Pemakaian:
 
 - `embedding_text`: teks untuk embedding.
 - `display_text`: teks untuk ditampilkan ke user.
-- `citation_text`: sitasi singkat untuk jawaban.
+- `citation_text`: sitasi singkat untuk jawaban, formatnya cukup `Jenis Peraturan No. X Tahun Y, Pasal Z`.
 - `metadata`: filter dan ranking retrieval.
 
 ## ChromaDB dan Notebook
@@ -195,6 +221,16 @@ Gunakan file:
 ```text
 data/processed_chunks_ringan_pasal_chroma_ready.json
 ```
+
+Untuk notebook yang berada di folder `notebooks/`, path yang dipakai adalah:
+
+```text
+../data/processed_chunks_ringan_pasal_chroma_ready.json
+../data/chroma_db
+../data/bm25_index.pkl
+```
+
+Untuk notebook yang berada di root project, path tetap memakai `data/...`.
 
 Notebook utama:
 
@@ -216,8 +252,8 @@ Vector database yang dipakai adalah **ChromaDB**, bukan Qdrant.
 python -m pip install -r requirements.txt
 
 # Optional GPU PaddleOCR
-python -m pip uninstall -y paddlepaddle
-python -m pip install -r requirements-paddle-gpu.txt
+python -m pip uninstall -y paddlepaddle paddlepaddle-gpu
+python -m pip install --no-cache-dir --force-reinstall -r requirements-paddle-gpu.txt
 
 # 2. Extract dan chunk PDF
 python .\praproses_ringan_pasal.py
@@ -243,4 +279,3 @@ File/folder berikut sengaja tidak di-commit:
 - folder backup dan hasil eksperimen.
 
 Artinya setelah clone repo, pengguna perlu menjalankan pipeline preprocessing ulang atau menyediakan artifact data sendiri.
-

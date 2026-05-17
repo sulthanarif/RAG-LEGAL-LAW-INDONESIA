@@ -17,7 +17,8 @@ torch
 transformers>=4.40.0
 accelerate
 bitsandbytes
-sentence-transformers
+# Pin to avoid newer optional audio/video imports that can pull torchcodec.
+sentence-transformers==3.4.1
 
 # Vector database / retrieval
 chromadb

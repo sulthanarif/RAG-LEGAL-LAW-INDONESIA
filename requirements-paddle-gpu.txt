@@ -1,16 +1,23 @@
 # ============================================================
 # PaddleOCR GPU install override
 #
-# Install setelah requirements.txt:
-#   python -m pip uninstall -y paddlepaddle
-#   python -m pip install -r requirements-paddle-gpu.txt
+# Disarankan install di environment terpisah khusus OCR.
+# Jangan campur dengan environment notebook RAG yang memakai torch CUDA 12.x,
+# karena Paddle GPU cu118 membawa nvidia-* cu11 dan bisa merusak import torch
+# dengan error seperti: undefined symbol: ncclCommShrink.
+#
+# Install setelah requirements.txt jika environment ini memang khusus OCR:
+#   python -m pip uninstall -y paddlepaddle paddlepaddle-gpu
+#   python -m pip install --no-cache-dir --force-reinstall -r requirements-paddle-gpu.txt
 #
 # Cek:
 #   python -c "import paddle; print(paddle.device.is_compiled_with_cuda()); print(paddle.device.get_device())"
 #
 # Catatan:
-# - Ini pakai wheel resmi Paddle CUDA 11.8 untuk Windows/Python.
+# - Ini pakai wheel resmi Paddle CUDA 11.8.
 # - Jangan install paddlepaddle CPU dan paddlepaddle-gpu barengan.
+# - Kalau pip bilang GPU sudah installed tapi script masih CPU build,
+#   berarti package CPU masih menang. Uninstall dua-duanya lalu reinstall.
 # ============================================================
 
 --extra-index-url https://www.paddlepaddle.org.cn/packages/stable/cu118/

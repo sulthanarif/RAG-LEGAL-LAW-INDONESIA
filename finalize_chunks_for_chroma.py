@@ -222,10 +222,20 @@ def finalize_chunks(args: argparse.Namespace) -> Dict:
                 meta["part_count"] = len(parts)
             display_text = prep.build_display_text(source_meta, part_pasal_id, part, ctx)
             citation_text = prep.build_citation_text(source_meta, part_pasal_id)
+            id_seed = "::".join(
+                [
+                    src,
+                    str(chunk.get("id", "")),
+                    str(old_meta.get("chunk_index", "")),
+                    pasal_id,
+                    str(part_index),
+                    hashlib.sha1(part.encode("utf-8")).hexdigest()[:16],
+                ]
+            )
 
             finalized = {
                 **chunk,
-                "id": hashlib.sha1(f"{src}::{pasal_id}::{part_index}".encode("utf-8")).hexdigest(),
+                "id": hashlib.sha1(id_seed.encode("utf-8")).hexdigest(),
                 "text": part,
                 "display_text": display_text,
                 "embedding_text": display_text,
