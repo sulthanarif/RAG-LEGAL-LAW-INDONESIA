@@ -13,7 +13,7 @@
 6. [Phase 5 - Embedding Pipeline](#6-phase-5--embedding-pipeline)
 7. [Phase 6 - Vector Database (ChromaDB)](#7-phase-6--vector-database-chromadb)
 8. [Phase 7 - Retrieval and Lex Posterior Ranking](#8-phase-7--retrieval-and-lex-posterior-ranking)
-9. [Phase 8 - Post-Retrieval Deduplication and Optional Reranking](#9-phase-8--post-retrieval-deduplication-and-optional-reranking)
+9. [Phase 8 - Post-Retrieval Deduplication and Neural Reranking](#9-phase-8--post-retrieval-deduplication-and-neural-reranking)
 10. [Phase 9 - Context Assembler](#10-phase-9--context-assembler)
 11. [Phase 10 - Answer Generation & Citation](#11-phase-10--answer-generation--citation)
 12. [Phase 11 - Evaluasi Pipeline](#12-phase-11--evaluasi-pipeline)
@@ -48,7 +48,7 @@ Phase 6 - ChromaDB Vector Store + BM25 Index
 Phase 7 - Retrieval and Lex Posterior Ranking
         |   Dense cosine + BM25 + RRF + publication_year ranking
         v
-Phase 8 - Deduplication and Optional Reranking
+Phase 8 - Deduplication and Neural Reranking
         |   Remove repeated article chunks before prompting
         v
 Phase 9 - Context Assembler
@@ -1331,7 +1331,7 @@ Perbandingan ini sesuai Section 3.4 proposal: proposed system dibandingkan denga
 
 ---
 
-## 9. Phase 8 - Post-Retrieval Deduplication and Optional Reranking
+## 9. Phase 8 - Post-Retrieval Deduplication and Neural Reranking
 
 ### 9.1 Deduplication Wajib
 
@@ -1358,12 +1358,12 @@ def dedupe_by_article(hits: list[dict], k: int = 5) -> list[dict]:
     return out
 ```
 
-### 9.2 Optional Neural Reranker
+### 9.2 Neural Reranker
 
-Reranker neural bukan komponen wajib proposal. Untuk menjaga sistem tetap ringan dan reproducible, default production prototype adalah rule-based ranking. Neural reranker boleh dipakai sebagai eksperimen tambahan, tetapi hasil utama skripsi/final project sebaiknya tetap melaporkan baseline dan proposed rule-based lex posterior.
+Reranker neural aktif secara default setelah candidate retrieval dense + BM25 dan deduplication. Hasil evaluasi tetap sebaiknya membandingkan baseline dense-only, hybrid BM25, dan hybrid + reranker agar kontribusi setiap komponen terlihat jelas.
 
 ```python
-USE_RERANKER = False
+USE_RERANKER = True
 
 if USE_RERANKER:
     from sentence_transformers import CrossEncoder
