@@ -1,0 +1,223 @@
+﻿id,topic,question,answer,expected_answer,overall_score,quality_label,keyword_missing,expected_article_rank,expected_law_rank,top1_reference
+Q17,PHK dan Jaminan Kehilangan Pekerjaan,"Seorang pekerja PKWTT terkena PHK dan ingin menuntut hak PHK sekaligus manfaat JKP. Bedakan hak uang dari pengusaha saat PHK dengan manfaat JKP dari program jaminan sosial, termasuk komponen manfaat JKP dan skema uang tunainya.","Berdasarkan referensi yang tersedia, berikut adalah pembedaan hak uang dari pengusaha saat PHK dengan manfaat JKP dari program jaminan sosial:
+
+**1. Hak Uang dari Pengusaha (Saat PHK)**
+Hak ini bersifat wajib bagi pengusaha untuk dipenuhi secara sekaligus kepada pekerja yang mengalami PHK, kecuali pengusaha tersebut berstatus usaha mikro.
+*   **Dasar Hukum:** PP Nomor 37 Tahun 2021 Pasal 37 ayat (1).
+*   **Komponen:** Manfaat uang tunai yang dihitung sesuai ketentuan Pasal 21 ayat (1) (biasanya mencakup uang pesangon, uang penghargaan masa kerja, dan uang penggantian hak).
+*   **Kewajiban:** Pengusaha wajib membayar sekaligus, kecuali untuk usaha mikro.
+
+**2. Manfaat JKP dari Program Jaminan Sosial**
+Manfaat ini diberikan oleh BPJS Ketenagakerjaan kepada pekerja/buruh yang telah terdaftar dan membayar iuran serta mengalami PHK.
+*   **Dasar Hukum:** PP Nomor 37 Tahun 2021 Pasal 1 ayat (1) dan Pasal 18.
+*   **Komponen Manfaat:**
+    1.  Uang tunai.
+    2.  Akses informasi pasar kerja.
+    3.  Pelatihan kerja.
+*   **Syarat Kepesertaan:** Pekerja harus telah terdaftar dan membayar iuran dengan masa iuran akumulasi minimal 12 bulan dalam 24 bulan kalender (PP Nomor 6 Tahun 2025 Pasal 19 ayat (2) dan (3)).
+*   **Skema Uang Tunai JKP:**
+    *   Dibayarkan dalam bentuk uang tunai.
+    *   Jumlah pembayaran dibatasi maksimal 6 kali dengan durasi masing-masing 3 bulan (total maksimal 18 bulan), kecuali untuk pekerja yang telah mencapai usia pensiun, meninggal dunia, atau cacat total tetap (PP Nomor 37 Tahun 2021 Pasal 21).
+    *   Pembayaran dilakukan oleh BPJS Ketenagakerjaan, bukan oleh pengusaha.
+
+**Catatan Penting:**
+*   **Naturalisasi Dasar Hukum:** PP Nomor 35 Tahun 2021 Pasal 52 ayat (2) tidak ditemukan dalam referensi yang diberikan. Referensi yang tersedia hanya mencakup PP Nomor 37 Tahun 2021 dan PP Nomor 6 Tahun 2025.
+*   **Hubungan Kedua Hak:** Kedua hak ini dapat dituntut secara bersamaan karena berasal dari sumber yang berbeda (pengusaha vs. jaminan sosial). Namun, jika pekerja tidak memenuhi syarat kepesertaan JKP (misalnya masa iuran belum cukup), maka pekerja hanya berhak atas hak uang dari pengusaha, bukan manfaat JKP.","Hak uang akibat PHK dari pengusaha mengacu pada kewajiban pembayaran uang pesangon dan/atau uang penghargaan masa kerja serta uang penggantian hak. Itu berbeda dari JKP, karena JKP adalah program yang wajib diikuti oleh pengusaha untuk mempertahankan derajat kehidupan layak saat pekerja kehilangan pekerjaan. Manfaat JKP terdiri dari uang tunai, akses informasi pasar kerja, dan pelatihan kerja. Uang tunai JKP diberikan paling banyak 6 bulan upah: 45% dari upah untuk 3 bulan pertama dan 25% dari upah untuk 3 bulan berikutnya, dengan dasar upah terakhir yang dilaporkan dan batas atas yang berlaku.",0.7096137903531392,good,kehilangan pekerjaan; 45 persen,4,1,"Peraturan Pemerintah No. 37 Tahun 2021, Pasal 1 | pp_Nomor_37_Tahun_2021.pdf | Pasal 1"
+Q19,Pekerja migran Indonesia,"Calon pekerja migran akan ditempatkan melalui BP2MI berdasarkan permintaan pemberi kerja berbadan hukum di negara tujuan. Jelaskan dasar penempatannya, isi minimum perjanjian tertulis antar pihak penempatan, dan dokumen/hubungan kerja yang wajib ada bagi pekerja migran.","Berdasarkan referensi yang tersedia, berikut adalah jawaban atas pertanyaan Anda:
+
+**1. Dasar Penempatan**
+Penempatan Calon Pekerja Migran Indonesia (CPMI) oleh Badan Pelindungan Pekerja Migran Indonesia (BP2MI) didasarkan pada dua hal:
+*   Kebutuhan pemerintah; dan
+*   Permintaan dari pemerintah negara Pemberi Kerja atau permintaan Pemberi Kerja berbadan hukum di negara tujuan penempatan.
+*(Dasar hukum: PP Nomor 10 Tahun 2020 Pasal 2)*
+
+**2. Isi Minimum Perjanjian Tertulis**
+Perjanjian tertulis antara BP2MI dan CPMI (Perjanjian Penempatan) harus memuat rincian dari surat permintaan yang telah diverifikasi, yaitu:
+*   Identitas pemberi kerja;
+*   Jumlah penempatan;
+*   Jenis pekerjaan;
+*   Upah atau gaji;
+*   Kualifikasi jabatan;
+*   Masa berlaku Perjanjian Kerja;
+*   Fasilitas tempat kerja; dan
+*   Jaminan sosial dan/atau asuransi.
+*(Dasar hukum: PP Nomor 10 Tahun 2020 Pasal 7 ayat 2)*
+
+**3. Dokumen dan Hubungan Kerja yang Wajib Ada**
+*   **Dokumen Wajib:** CPMI wajib memiliki surat permintaan dari Pemberi Kerja yang telah diverifikasi oleh Atase Ketenagakerjaan (atau pejabat dinas luar negeri jika Atase belum ada).
+*   **Hubungan Kerja:** Terjadi hubungan kerja antara CPMI dengan Pemberi Kerja melalui Perjanjian Kerja yang memuat syarat kerja, hak, kewajiban, serta jaminan keamanan dan keselamatan selama bekerja.
+*(Dasar hukum: PP Nomor 10 Tahun 2020 Pasal 7 ayat 1 & 2; PP Nomor 10 Tahun 2020 Pasal 1 bagian 1 ayat 3 & 5)*","Penempatan PMI oleh BP2MI dapat didasarkan pada kebutuhan pemerintah atau permintaan dari pemerintah negara pemberi kerja atau pemberi kerja berbadan hukum di negara tujuan. Penempatan itu dilakukan atas dasar perjanjian tertulis. Perjanjian tertulis disusun berdasarkan prinsip persamaan kedudukan, saling menguntungkan, dan memperhatikan hukum nasional serta internasional, dan paling sedikit memuat identitas para pihak, hak dan kewajiban, syarat dan prosedur penempatan, mekanisme pelindungan PMI, pemantauan dan evaluasi, penyelesaian sengketa, perubahan perjanjian, serta jangka waktu dan pengakhiran. Dari sisi calon PMI, dokumen wajib mencakup antara lain sertifikat kompetensi, surat keterangan sehat, paspor, visa kerja, perjanjian penempatan, dan perjanjian kerja. Hubungan kerja dengan pemberi kerja didasarkan pada perjanjian kerja yang memuat unsur pekerjaan, upah, dan perintah, serta terjadi setelah perjanjian kerja disepakati dan ditandatangani.",0.7225060520416653,good,hak dan kewajiban; mekanisme pelindungan; penyelesaian sengketa; sertifikat kompetensi; paspor; visa kerja; pekerjaan upah perintah,1,1,"Peraturan Pemerintah No. 10 Tahun 2020, Pasal 3 | PP_10_2020.pdf | Pasal 3"
+Q05,PKWT,"Dalam bentuk bahasa apa PKWT wajib dibuat, terutama ketika pekerjanya warga negara Indonesia?","Berdasarkan referensi yang tersedia, **tidak ditemukan ketentuan spesifik** mengenai bentuk bahasa (misalnya wajib bahasa Indonesia atau boleh bahasa asing) yang harus digunakan dalam pembuatan Perjanjian Kerja Waktu Tertentu (PKWT), baik untuk pekerja Warga Negara Indonesia maupun lainnya.
+
+Referensi yang tersedia hanya mengatur bahwa PKWT harus dibuat secara **tertulis** (PP No. 35 Tahun 2021 Pasal 18 ayat 2) dan memuat isi tertentu seperti nama, alamat, jabatan, upah, serta jangka waktu (PP No. 35 Tahun 2021 Pasal 6 dan Pasal 13). Ketentuan mengenai bahasa yang digunakan dalam perjanjian kerja tidak tercantum dalam pasal-pasal yang disediakan.","PKWT wajib dibuat secara tertulis dengan huruf latin dan menggunakan bahasa Indonesia. Jika dibuat dalam bahasa Indonesia dan bahasa asing lalu terdapat perbedaan penafsiran, naskah bahasa Indonesia yang berlaku.",0.7275232021013894,good,huruf latin; penafsiran; bahasa Indonesia berlaku,6,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 1 | PP Nomor 35 Tahun 2021.pdf | Pasal 1"
+Q16,PHK dan perselisihan hubungan industrial,"Perusahaan ingin mem-PHK pekerja karena pelanggaran aturan perusahaan setelah SP1, SP2, dan SP3, tetapi pekerja menolak. Jelaskan urutan langkah yang tepat: apa yang harus diupayakan sebelum PHK, hak uang apa yang menjadi dasar bila PHK karena pelanggaran berulang, dan ke mana sengketa dibawa jika bipartit/mediasi gagal?","Berdasarkan referensi yang tersedia, berikut adalah jawaban atas kasus tersebut:
+
+**1. Langkah yang Harus Diupayakan Sebelum PHK**
+Sebelum melakukan Pemutusan Hubungan Kerja (PHK), pengusaha wajib memberikan **Surat Peringatan (SP) berturut-turut sebanyak tiga kali (SP1, SP2, dan SP3)** kepada pekerja yang bersangkutan.
+*   **Dasar Hukum:** PP Nomor 35 Tahun 2021 Pasal 52 ayat (1) dan UU No. 13 Tahun 2003 Pasal 161 ayat (1).
+*   **Catatan:** Surat peringatan tersebut berlaku untuk jangka waktu paling lama 6 bulan, kecuali ditentukan lain dalam Perjanjian Kerja, Peraturan Perusahaan, atau Perjanjian Kerja Bersama.
+
+**2. Hak Uang yang Menjadi Dasar (Jika PHK karena Pelanggaran Berulang)**
+Jika pekerja melakukan pelanggaran ketentuan yang diatur dalam Perjanjian Kerja, Peraturan Perusahaan, atau Perjanjian Kerja Bersama setelah menerima SP1, SP2, dan SP3 secara berturut-turut, pekerja berhak atas:
+*   **Uang Pesangon:** 0,5 (nol koma lima) kali ketentuan Pasal 40 ayat (2).
+*   **Uang Penghargaan Masa Kerja:** 1 (satu) kali ketentuan Pasal 40 ayat (3).
+*   **Uang Penggantian Hak:** Sesuai ketentuan Pasal 40 ayat (4).
+*   **Dasar Hukum:** PP Nomor 35 Tahun 2021 Pasal 52 ayat (1).
+
+**3. Penyelesaian Sengketa Jika Bipartit/Mediasi Gagal**
+Jika terjadi perbedaan pendapat mengenai PHK tersebut, penyelesaian harus dilakukan melalui **perundingan bipartit** antara Pengusaha dengan Pekerja/Buruh dan/atau Serikat Pekerja/Serikat Buruh. Jika perundingan bipartit tidak mencapai kesepakatan, penyelesaian tahap berikutnya dilakukan melalui **mekanisme penyelesaian perselisihan hubungan industrial** sesuai ketentuan peraturan perundang-undangan.
+*   **Dasar Hukum:** PP Nomor 35 Tahun 2021 Pasal 39 ayat (2) dan ayat (3).","Sebelum PHK, para pihak harus mengupayakan agar PHK tidak terjadi dan merundingkan maksud PHK. Untuk pelanggaran ketentuan perjanjian kerja, peraturan perusahaan, atau PKB yang telah didahului SP1, SP2, dan SP3 berturut-turut, dasar haknya adalah 0,5 kali uang pesangon, 1 kali uang penghargaan masa kerja, dan uang penggantian hak. Jika pekerja menolak, perselisihan wajib lebih dulu diupayakan melalui perundingan bipartit paling lama 30 hari kerja. Bila gagal, perselisihan dicatatkan ke instansi ketenagakerjaan dengan bukti bipartit; jika konsiliasi atau mediasi tidak mencapai kesepakatan, salah satu pihak dapat mengajukan gugatan ke Pengadilan Hubungan Industrial.",0.7315822368939717,good,mencegah PHK; setengah kali pesangon; satu kali UPMK; Pengadilan Hubungan Industrial,3,1,"Undang-Undang No. 13 Tahun 2003, Pasal 1 | UU_Nomor_13_Tahun_2003.pdf | Pasal 1"
+Q09,Lembur,Apa syarat utama yang harus ada sebelum pengusaha mempekerjakan pekerja melebihi waktu kerja normal?,"Sebelum pengusaha mempekerjakan pekerja melebihi waktu kerja normal, syarat utamanya adalah adanya **persetujuan pekerja/buruh yang bersangkutan**.
+
+Dasar hukumnya adalah:
+*   **PP Nomor 35 Tahun 2021 Pasal 52 ayat 2**: Pengusaha dilarang mempekerjakan pekerja/buruh melebihi waktu kerja sebagaimana dimaksud dalam Pasal 51 ayat (2) kecuali dengan persetujuan pekerja/buruh.
+*   **UU No. 13 Tahun 2003 Pasal 78 ayat (1)**: Pengusaha yang mempekerjakan pekerja/buruh melebihi waktu kerja harus memenuhi syarat adanya persetujuan pekerja/buruh yang bersangkutan.",Pengusaha yang mempekerjakan pekerja melebihi waktu kerja harus memenuhi syarat adanya persetujuan pekerja yang bersangkutan dan adanya perintah kerja lembur dari pengusaha.,0.7567363161132449,good,lembur; perintah kerja lembur,7,2,"Undang-Undang No. 13 Tahun 2003, Pasal 78 | UU_Nomor_13_Tahun_2003.pdf | Pasal 78"
+Q20,"K3, narkotika, dan jaminan sosial","Perusahaan menemukan indikasi peredaran narkotika di tempat kerja dan pada saat yang sama menjalankan pemagangan. Jelaskan tindakan kepatuhan yang perlu dilakukan terkait pelaporan/kebijakan pencegahan narkotika, hak K3 peserta pemagangan, dan konsekuensi bila pekerja belum diikutsertakan dalam JKK/JKM.","Berdasarkan referensi yang tersedia, berikut adalah penjelasan tindakan kepatuhan dan konsekuensi hukumnya:
+
+**1. Tindakan Pelaporan dan Kebijakan Pencegahan**
+*   **Pelaporan:** Pengusaha wajib segera melaporkan temuan peredaran narkotika kepada Kepolisian Negara Republik Indonesia dan instansi ketenagakerjaan Kabupaten/Kota melalui mekanisme Panitia Pembina Keselamatan dan Kesehatan Kerja (P2K3) atau Pelayanan Kesehatan Kerja (Pasal 8 ayat 1 dan 2).
+*   **Kebijakan Pencegahan:** Pengusaha wajib menetapkan kebijakan tertulis yang memuat komitmen pencegahan dan pembentukan unit penanganan, serta melibatkan pekerja/buruh, serikat pekerja/buruh, atau pihak ketiga ahli dalam pelaksanaannya (Pasal 2 ayat 1-3 dan Pasal 4 ayat 1-4).
+
+**2. Hak K3 Peserta Pemagangan**
+*   Referensi yang tersedia **tidak mengatur secara spesifik** mengenai hak Keselamatan dan Kesehatan Kerja (K3) khusus untuk peserta pemagangan.
+*   Namun, berdasarkan Pasal 2 ayat (3), upaya pencegahan dan penanggulangan wajib dilakukan dengan melibatkan ""pekerja/buruh"". Peserta pemagangan secara hukum tidak dikategorikan sebagai pekerja/buruh (mereka adalah peserta pelatihan), sehingga keterlibatan mereka dalam mekanisme pelaporan dan program pencegahan harus disesuaikan dengan definisi ""tempat kerja"" dan prinsip non-diskriminasi yang berlaku umum, meskipun detail teknisnya tidak tercantum dalam referensi ini.
+
+**3. Konsekuensi Jika Pekerja Belum Diikutsertakan dalam JKK/JKM**
+*   Referensi yang tersedia **tidak mencantumkan** konsekuensi hukum atau sanksi spesifik bagi pengusaha yang tidak mengikutsertakan pekerja dalam Jaminan Kecelakaan Kerja (JKK) atau Jaminan Kematian (JKM).
+*   Referensi hanya mengatur bahwa ketentuan perawatan dan rehabilitasi akibat penyalahgunaan zat diatur dalam Perjanjian Kerja, Peraturan Perusahaan, atau Perjanjian Kerja Bersama (Pasal 7 ayat 1), namun tidak menyebutkan kewajiban mutlak JKK/JKM atau sanksinya dalam dokumen ini.
+
+**Catatan Tambahan:**
+Referensi yang tersedia belum cukup untuk menjawab secara lengkap mengenai konsekuensi hukum tidak adanya JKK/JKM dan hak spesifik peserta pemagangan, karena referensi hanya memuat regulasi Pencegahan dan Penanggulangan Penyalahgunaan Narkotika (PER.11/MEN/VI/2005). Untuk aspek JKK/JKM dan regulasi pemagangan, diperlukan referensi lain seperti UU Ketenagakerjaan atau Peraturan Pemerintah terkait Jaminan Sosial dan Pemagangan.","Untuk pencegahan dan penanggulangan narkotika di tempat kerja, pengusaha wajib melakukan upaya aktif, antara lain penetapan kebijakan, penyusunan dan pelaksanaan program, serta konsultasi/koordinasi dengan pihak terkait. Bila ditemukan seseorang memiliki atau mengedarkan narkotika, psikotropika, atau zat adiktif lainnya di tempat kerja, pengusaha atau pekerja harus segera melaporkan kepada Kepolisian dan laporan juga disampaikan kepada instansi ketenagakerjaan. Dalam pemagangan, peserta berhak memperoleh fasilitas K3, dan penyelenggara wajib menyediakan alat pelindung diri sesuai persyaratan K3. Jika pemberi kerja belum mengikutsertakan pekerjanya dalam program JKK atau JKM dan terjadi risiko, pemberi kerja wajib membayar hak pekerja sesuai ketentuan program tersebut.",0.7673922807511829,good,psikotropika; zat adiktif; konsultasi pekerja; lapor Kepolisian; alat pelindung diri; pemberi kerja wajib membayar hak pekerja,1,1,"Peraturan Menteri Ketenagakerjaan No. PER.11/MEN/VI/2005 Tahun 2005, Pasal 8 | PER-11-MEN-VI-2005.pdf | Pasal 8"
+Q15,PHK,Apa dasar perhitungan upah yang digunakan untuk menghitung pesangon dan uang penghargaan masa kerja?,"Dasar perhitungan upah untuk menghitung pesangon dan uang penghargaan masa kerja adalah **upah pokok** serta **segala macam bentuk tunjangan yang bersifat tetap** yang diberikan kepada pekerja/buruh dan keluarganya, termasuk harga pembelian dari catu yang diberikan secara cuma-cuma (jika catu harus dibayar dengan subsidi, maka dihitung sebagai selisih antara harga pembelian dan harga yang dibayar pekerja).
+
+Aturan ini diatur dalam:
+*   **Pasal 157 ayat (1) UU No. 13 Tahun 2003** (untuk pekerja tetap).
+*   **Pasal 40 ayat (1) PP No. 35 Tahun 2021** (untuk pekerja kontrak).
+
+Selain itu, jika upah dibayarkan secara harian, bulanan, satuan hasil, borongan, atau tergantung cuaca, maka perhitungan upah sebulan disesuaikan dengan ketentuan rata-rata penghasilan selama 12 bulan terakhir atau ketentuan upah minimum yang berlaku (Pasal 157 ayat (2), (3), dan (4) UU No. 13 Tahun 2003 / Pasal 40 ayat (1) PP No. 35 Tahun 2021).",Upah yang digunakan sebagai dasar pembayaran uang pesangon dan uang penghargaan masa kerja terdiri atas upah pokok dan tunjangan tetap yang diberikan kepada pekerja dan keluarganya.,0.7950715150833129,good,tunjangan tetap,4,4,"Undang-Undang No. 13 Tahun 2003, Pasal 157 | UU_Nomor_13_Tahun_2003.pdf | Pasal 157"
+Q13,PHK,"Dalam PHK, komponen apa saja yang termasuk uang penggantian hak menurut PP 35 Tahun 2021?","Menurut **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 40 ayat (4)**, komponen yang termasuk dalam uang penggantian hak adalah:
+
+1.  **Cuti tahunan** yang belum diambil dan belum gugur.
+2.  **Biaya atau ongkos pulang** untuk Pekerja/Buruh.
+
+*(Catatan: Referensi yang tersedia tidak menyebutkan komponen lain di luar kedua poin tersebut).*","Uang penggantian hak meliputi cuti tahunan yang belum diambil dan belum gugur, biaya atau ongkos pulang untuk pekerja dan keluarganya ke tempat pekerja diterima bekerja, serta hal lain yang ditetapkan dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama.",0.7981231532778058,good,pekerja dan keluarga; perjanjian kerja; peraturan perusahaan; PKB,2,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 59 | PP Nomor 35 Tahun 2021.pdf | Pasal 59"
+Q14,PHK,Apa saja komponen uang yang wajib dibayarkan pengusaha ketika terjadi PHK secara umum?,"Berdasarkan referensi yang tersedia, komponen uang yang wajib dibayarkan pengusaha ketika terjadi Pemutusan Hubungan Kerja (PHK) secara umum adalah:
+
+1.  **Uang Pesangon**
+2.  **Uang Penghargaan Masa Kerja**
+3.  **Uang Penggantian Hak**
+
+Dasar hukumnya adalah **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 40 ayat (1)** dan **Undang-Undang Nomor 13 Tahun 2003 Pasal 156 ayat (1)** yang menyatakan bahwa pengusaha wajib membayar ketiga komponen tersebut.
+
+*Catatan: Untuk usaha mikro dan usaha kecil, pembayaran ketiga komponen tersebut dapat ditentukan berdasarkan kesepakatan antara pengusaha dan pekerja sesuai **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 59**.*","Ketika terjadi PHK, pengusaha wajib membayar uang pesangon, uang penghargaan masa kerja, dan uang penggantian hak yang seharusnya diterima pekerja. Besaran detailnya bergantung pada alasan PHK dan masa kerja.",0.8237053708235423,good,,5,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 59 | PP Nomor 35 Tahun 2021.pdf | Pasal 59"
+Q18,Disabilitas dan pemagangan,"Jika pemberi kerja membuka program pemagangan untuk peserta penyandang disabilitas, apa saja kewajiban dan bentuk dukungan yang harus diperhatikan dari sisi hak peserta, kewajiban penyelenggara, kebutuhan khusus peserta, dan peran ULD Ketenagakerjaan?","Berdasarkan referensi yang tersedia, berikut adalah kewajiban dan bentuk dukungan dalam program pemagangan untuk peserta penyandang disabilitas:
+
+**1. Kewajiban Penyelenggara Pemagangan (Sesuai Permen No. 6 Tahun 2020 Pasal 16)**
+Penyelenggara wajib:
+*   Membimbing peserta sesuai program pemagangan.
+*   Memenuhi hak peserta sesuai Perjanjian Pemagangan.
+*   Menyediakan Alat Pelindung Diri (APD) sesuai persyaratan K3.
+*   Memberikan uang saku kepada peserta.
+*   Mengikutsertakan peserta dalam program jaminan sosial.
+*   Mengevaluasi peserta pemagangan.
+*   Memberikan sertifikat pemagangan atau surat keterangan telah mengikuti pemagangan.
+
+**2. Bentuk Dukungan dan Kebutuhan Khusus Peserta (Sesuai Permen No. 6 Tahun 2020 Pasal 24)**
+Penyelenggaraan harus memperhatikan kebutuhan khusus peserta, yang mencakup:
+*   **Masa Orientasi/Adaptasi:** Memberikan kesempatan untuk masa orientasi atau adaptasi di awal masa kerja untuk menentukan apa yang diperlukan, termasuk penyelenggaraan pelatihan atau magang.
+*   **Fleksibilitas Tempat Kerja:** Menyediakan tempat bekerja yang fleksibel dengan menyesuaikan ragam disabilitas tanpa mengurangi target tugas kerja.
+*   **Waktu Istirahat:** Menyediakan waktu istirahat.
+*   **Jadwal Kerja Fleksibel:** Menyediakan jadwal kerja yang fleksibel dengan tetap memenuhi alokasi waktu kerja.
+*   **Asistensi:** Memberikan asistensi dalam pelaksanaan pekerjaan dengan memperhatikan kebutuhan khusus.
+*   **Cuti Khusus:** Memberikan izin atau cuti khusus untuk pengobatan.
+
+**3. Peran Unit Layanan Disabilitas Bidang Ketenagakerjaan (ULD Ketenagakerjaan) (Sesuai Permen No. 21 Tahun 2020 Pasal 18)**
+ULD Ketenagakerjaan bertugas:
+*   Merencanakan penghormatan, pelindungan, dan pemenuhan hak atas pekerjaan penyandang disabilitas.
+*   Memberikan informasi kepada pemerintah, pemerintah daerah, dan perusahaan swasta mengenai proses rekrutmen, penerimaan, pelatihan kerja, penempatan kerja, keberlanjutan kerja, dan pengembangan karier yang adil dan tanpa diskriminasi.
+*   Menyediakan pendampingan kepada tenaga kerja penyandang disabilitas.
+*   Menyediakan pendampingan kepada pemberi kerja yang menerima tenaga kerja penyandang disabilitas.
+*   Mengoordinasikan ULD Ketenagakerjaan, pemberi kerja, dan tenaga kerja dalam pemenuhan dan penyediaan alat bantu kerja untuk penyandang disabilitas.
+
+**Dasar Hukum:**
+*   Peraturan Menteri Ketenagakerjaan No. 6 Tahun 2020 Pasal 16 dan Pasal 24.
+*   Peraturan Menteri Ketenagakerjaan No. 21 Tahun 2020 Pasal 18.","Peserta pemagangan berhak memperoleh bimbingan, pemenuhan hak sesuai perjanjian pemagangan, fasilitas K3, uang saku, kepesertaan jaminan sosial, serta sertifikat atau surat keterangan. Penyelenggara wajib membimbing peserta, memenuhi hak peserta, menyediakan alat pelindung diri sesuai K3, memberi uang saku, mengikutsertakan peserta dalam jaminan sosial, mengevaluasi, dan memberikan sertifikat atau surat keterangan. Untuk peserta penyandang disabilitas, penyelenggaraan pemagangan harus memperhatikan kebutuhan khusus peserta. ULD Ketenagakerjaan dapat mendukung melalui tenaga pendamping yang mendampingi tenaga kerja penyandang disabilitas dan pemberi kerja, termasuk penyuluhan, bimbingan jabatan, konsultasi pelatihan/penempatan/pemberdayaan, pemenuhan dan pelindungan hak, serta penyediaan alat bantu kerja.",0.8458163170814514,good,bimbingan; tenaga pendamping,2,1,"Peraturan Menteri Ketenagakerjaan No. 21 Tahun 2020, Pasal 1 bagian 1 | permen_Nomor_21_Tahun_2020.pdf | Pasal 1"
+Q10,PHK,"Jika pekerja melanggar ketentuan perjanjian kerja atau peraturan perusahaan setelah diberi surat peringatan pertama, kedua, dan ketiga, hak PHK apa yang menjadi dasar jawabannya?","Berdasarkan referensi yang tersedia, jika pekerja melanggar ketentuan perjanjian kerja atau peraturan perusahaan setelah diberi surat peringatan pertama, kedua, dan ketiga secara berturut-turut, maka pekerja berhak atas:
+
+1.  **Uang pesangon** sebesar 0,5 kali ketentuan Pasal 40 ayat (2) (sesuai PP No. 35 Tahun 2021 Pasal 52 ayat 1 huruf a).
+2.  **Uang penghargaan masa kerja** sebesar 1 kali ketentuan Pasal 40 ayat (3) (sesuai PP No. 35 Tahun 2021 Pasal 52 ayat 1 huruf b).
+3.  **Uang penggantian hak** sesuai ketentuan Pasal 40 ayat (4) (sesuai PP No. 35 Tahun 2021 Pasal 52 ayat 1 huruf c).
+
+Dasar hukumnya adalah **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 52 ayat (1)**.
+
+*Catatan: Ketentuan ini berlaku untuk Perjanjian Kerja Waktu Tertentu (PKWT). Untuk Perjanjian Kerja Waktu Tidak Tertentu (PKWTT), dasar hukumnya adalah Undang-Undang No. 13 Tahun 2003 Pasal 161 yang memberikan hak atas uang pesangon 1 kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 1 kali ketentuan Pasal 156 ayat (3), dan uang penggantian hak.*","Untuk PHK karena pekerja melakukan pelanggaran setelah diberikan surat peringatan pertama, kedua, dan ketiga, pekerja berhak atas uang pesangon sebesar setengah kali ketentuan pesangon, uang penghargaan masa kerja sebesar satu kali ketentuan, dan uang penggantian hak.",0.8573137124379475,excellent,setengah kali pesangon; satu kali uang penghargaan masa kerja,2,2,"Undang-Undang No. 13 Tahun 2003, Pasal 161 | UU_Nomor_13_Tahun_2003.pdf | Pasal 161"
+Q11,PHK,"Jika pekerja di-PHK karena pelanggaran bersifat mendesak, apakah ia tetap mendapat pesangon dan UPMK?","Berdasarkan referensi yang tersedia, jika pekerja di-PHK karena pelanggaran bersifat mendesak, ia **tidak berhak** atas uang pesangon dan uang penghargaan masa kerja (UPMK).
+
+Menurut **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 52 ayat (2)**, dalam hal pengusaha melakukan PHK karena alasan pelanggaran bersifat mendesak, pekerja/buruh hanya berhak atas:
+1.  Uang penggantian hak sesuai ketentuan Pasal 40 ayat (4).
+2.  Uang pisah yang besarannya diatur dalam Perjanjian Kerja, Peraturan Perusahaan, atau Perjanjian Kerja Bersama.
+
+Sementara itu, hak atas uang pesangon dan UPMK hanya diberikan jika PHK dilakukan karena pelanggaran ketentuan yang telah diberikan surat peringatan pertama, kedua, dan ketiga secara berturut-turut (**PP Nomor 35 Tahun 2021 Pasal 52 ayat (1)**).","Jika PHK terjadi karena pekerja melakukan pelanggaran bersifat mendesak yang diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama, pekerja berhak atas uang penggantian hak dan uang pisah yang besarannya diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama. Ketentuan ini tidak memberikan uang pesangon dan uang penghargaan masa kerja.",0.8771370995839437,excellent,tidak pesangon; tidak UPMK,1,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 52 | PP Nomor 35 Tahun 2021.pdf | Pasal 52"
+Q04,PKWT harian,Pekerja harian lepas bekerja 23 hari dalam sebulan selama 3 bulan berturut-turut. Bagaimana status hubungan kerjanya menurut aturan PKWT harian?,"Berdasarkan **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 10 ayat (4)**, hubungan kerja pekerja harian tersebut **demi hukum berubah menjadi Perjanjian Kerja Waktu Tidak Tertentu (PKWTT)**.
+
+Hal ini terjadi karena pekerja telah bekerja selama **23 hari** (melebihi batas 21 hari) dalam **3 bulan berturut-turut**, sehingga Perjanjian Kerja Harian yang semula berlaku menjadi tidak berlaku.","PKWT harian hanya dapat dibuat untuk pekerjaan tertentu yang berubah dalam waktu dan volume pekerjaan serta upah berdasarkan kehadiran, dengan ketentuan pekerja bekerja kurang dari 21 hari dalam 1 bulan. Jika pekerja bekerja 21 hari atau lebih selama 3 bulan berturut-turut atau lebih, perjanjian kerja harian menjadi PKWTT.",0.8937286732991535,excellent,menjadi PKWTT,1,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 10 | PP Nomor 35 Tahun 2021.pdf | Pasal 10"
+Q07,Alih daya,"Dalam hubungan kerja alih daya, siapa pihak yang bertanggung jawab atas perlindungan upah, kesejahteraan, syarat kerja, dan perselisihan pekerja?","Berdasarkan referensi yang tersedia, pihak yang bertanggung jawab atas perlindungan upah, kesejahteraan, syarat kerja, dan perselisihan pekerja dalam hubungan kerja alih daya adalah **Perusahaan Alih Daya**.
+
+Dasar hukumnya adalah:
+*   **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 18 ayat (3)**: Pelindungan Pekerja/Buruh, Upah, kesejahteraan, syarat kerja, dan perselisihan yang timbul dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan dan menjadi tanggung jawab Perusahaan Alih Daya.
+*   **Peraturan Menteri Ketenagakerjaan Nomor 7 Tahun 2026 Pasal 4 ayat (2)**: Pelindungan dan hak pekerja/buruh alih daya dilaksanakan sekurang-kurangnya sesuai dengan ketentuan peraturan perundang-undangan dan menjadi tanggung jawab Perusahaan Alih Daya.
+*   **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 19 ayat (3)**: Dalam hal Pekerja/Buruh tidak memperoleh jaminan atas kelangsungan bekerja, Perusahaan Alih Daya bertanggung jawab atas pemenuhan hak Pekerja/Buruh.","Perlindungan pekerja, upah, kesejahteraan, syarat kerja, dan perselisihan yang timbul menjadi tanggung jawab perusahaan alih daya sebagai pemberi kerja pekerja alih daya.",0.8945549503962199,excellent,perlindungan pekerja,1,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 18 | PP Nomor 35 Tahun 2021.pdf | Pasal 18"
+Q06,Alih daya,Apa syarat pokok perusahaan alih daya terkait bentuk badan usaha dan perizinan sebelum mempekerjakan pekerja alih daya?,"Berdasarkan referensi yang tersedia, syarat pokok perusahaan alih daya adalah:
+
+1.  **Bentuk Badan Usaha:** Perusahaan Alih Daya harus berbentuk **badan hukum** (PP No. 35 Tahun 2021 Pasal 20 ayat 1; PM No. 7 Tahun 2026 Pasal 1 ayat 3).
+2.  **Perizinan Berusaha:** Perusahaan wajib memenuhi perizinan berusaha yang diterbitkan oleh Pemerintah Pusat sesuai dengan norma, standar, prosedur, dan kriteria yang ditetapkan (PP No. 35 Tahun 2021 Pasal 20 ayat 1).
+3.  **Jangka Waktu Usaha:** Kegiatan usaha harus dijalankan paling lambat **1 (satu) tahun** sejak perizinan berusaha diterbitkan (PM No. 7 Tahun 2026 Pasal 6 ayat c).",Perusahaan alih daya wajib berbentuk badan hukum dan wajib memenuhi perizinan berusaha yang diterbitkan oleh pemerintah pusat sesuai ketentuan peraturan perundang-undangan.,0.9080977408091228,excellent,,1,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 20 | PP Nomor 35 Tahun 2021.pdf | Pasal 20"
+Q12,PHK,Apa hak pekerja yang mengundurkan diri atas kemauan sendiri dan memenuhi syarat pengunduran diri?,"Berdasarkan referensi yang tersedia, pekerja yang mengundurkan diri atas kemauan sendiri dan memenuhi syarat berhak atas:
+
+1.  **Uang Penggantian Hak:** Sesuai ketentuan Pasal 40 ayat (4) PP Nomor 35 Tahun 2021 (merujuk pada hak yang sama dalam Pasal 156 ayat (4) UU No. 13 Tahun 2003).
+2.  **Uang Pisah:** Besarnya dan pelaksanaannya diatur dalam Perjanjian Kerja, Peraturan Perusahaan, atau Perjanjian Kerja Bersama.
+
+**Dasar Hukum:**
+*   **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 50 ayat (1)** dan **Pasal 36 huruf i**.
+*   **Undang-Undang Nomor 13 Tahun 2003 Pasal 162 ayat (1) dan (2)**.
+
+**Syarat Pengunduran Diri (sesuai PP No. 35 Tahun 2021 Pasal 36 huruf i):**
+1.  Mengajukan permohonan pengunduran diri secara tertulis selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal mulai pengunduran diri.
+2.  Tidak terikat dalam ikatan dinas.
+3.  Tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri.","Pekerja yang mengundurkan diri atas kemauan sendiri dan memenuhi syarat berhak atas uang penggantian hak dan uang pisah yang besarannya diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama.",0.9104557331403096,excellent,,2,2,"Undang-Undang No. 13 Tahun 2003, Pasal 162 | UU_Nomor_13_Tahun_2003.pdf | Pasal 162"
+Q01,PKWT,"Jika pekerja PKWT bekerja selama 6 bulan lalu kontraknya berakhir sesuai jangka waktu, hak kompensasi apa yang perlu diberikan pengusaha dan bagaimana rumus umumnya?","Berdasarkan referensi yang tersedia, pengusaha wajib memberikan **Uang Kompensasi** kepada pekerja PKWT yang telah bekerja selama 6 bulan sesuai jangka waktu kontrak.
+
+**Dasar Hukum:**
+*   **PP Nomor 35 Tahun 2021 Pasal 15 ayat (1):** Pengusaha wajib memberikan uang kompensasi kepada pekerja/buruh yang hubungan kerjanya berdasarkan PKWT.
+*   **PP Nomor 35 Tahun 2021 Pasal 15 ayat (3):** Uang kompensasi diberikan kepada pekerja/buruh yang telah mempunyai masa kerja paling sedikit 1 (satu) bulan secara terus menerus.
+*   **PP Nomor 35 Tahun 2021 Pasal 16 ayat (1) huruf b:** Untuk PKWT selama 1 (satu) bulan atau lebih tetapi kurang dari 12 (dua belas) bulan, dihitung secara proporsional.
+
+**Rumus Umum:**
+Uang Kompensasi = (Masa Kerja / 12) x 1 Bulan Upah
+*(Di mana ""1 Bulan Upah"" terdiri dari Upah Pokok dan Tunjangan Tetap sesuai Pasal 16 ayat (2)).*
+
+**Perhitungan untuk kasus 6 bulan:**
+Uang Kompensasi = (6 / 12) x 1 Bulan Upah = **0,5 (satu setengah) Bulan Upah**.","Pekerja PKWT berhak memperoleh uang kompensasi saat hubungan kerja berakhir karena jangka waktu selesai. Untuk masa kerja 12 bulan secara terus menerus kompensasinya 1 bulan upah. Untuk masa kerja kurang dari 12 bulan atau lebih dari 12 bulan, nilainya dihitung proporsional berdasarkan masa kerja dibagi 12 dikali 1 bulan upah. Jadi masa kerja 6 bulan dihitung 6 per 12 dikali 1 bulan upah.",0.9184461808204651,excellent,berakhir,1,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 15 | PP Nomor 35 Tahun 2021.pdf | Pasal 15"
+Q03,PKWT,"Untuk pekerjaan yang diperkirakan selesai dalam waktu tertentu, berapa batas maksimal jangka waktu PKWT beserta perpanjangannya?","Batas maksimal jangka waktu Perjanjian Kerja Waktu Tertentu (PKWT) untuk pekerjaan yang diperkirakan selesai dalam waktu tertentu adalah **3 (tiga) tahun**, dengan ketentuan dapat diperpanjang **1 (satu) kali** untuk jangka waktu paling lama **1 (satu) tahun**.
+
+Dasar hukumnya adalah:
+*   **Pasal 4 ayat (1) huruf a PP Nomor 35 Tahun 2021**: PKWT dapat dibuat untuk pekerjaan yang diperkirakan penyelesaiannya dalam waktu yang tidak terlalu lama.
+*   **Pasal 8 ayat (1) PP Nomor 35 Tahun 2021**: Jangka waktu PKWT berdasarkan jangka waktu dapat dibuat untuk paling lama 5 (lima) tahun.
+*   **Pasal 59 ayat (1) huruf b UU Nomor 13 Tahun 2003**: Pekerjaan yang diperkirakan penyelesaiannya dalam waktu yang tidak terlalu lama paling lama 3 (tiga) tahun.
+*   **Pasal 59 ayat (4) UU Nomor 13 Tahun 2003**: PKWT dapat diperpanjang 1 (satu) kali untuk jangka waktu paling lama 1 (satu) tahun.
+
+*Catatan: Terdapat perbedaan regulasi antara PP Nomor 35 Tahun 2021 (maksimal 5 tahun) dan UU Nomor 13 Tahun 2003 (maksimal 3 tahun + 1 tahun perpanjangan). Berdasarkan referensi yang diberikan, kedua aturan tersebut berlaku.*",PKWT berdasarkan jangka waktu untuk pekerjaan yang diperkirakan selesai dalam waktu tertentu dapat dibuat paling lama 5 tahun termasuk perpanjangannya.,0.9334691190719605,excellent,,2,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 9 | PP Nomor 35 Tahun 2021.pdf | Pasal 9"
+Q02,PKWT,"Apakah masa percobaan boleh diterapkan kepada pekerja PKWT, dan apa akibat hukumnya bila tetap dicantumkan?","Berdasarkan referensi yang tersedia, masa percobaan **tidak boleh** diterapkan kepada pekerja Perjanjian Kerja Waktu Tertentu (PKWT).
+
+Dasar hukumnya adalah:
+1.  **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 12 ayat (1)**: PKWT tidak dapat mensyaratkan adanya masa percobaan kerja.
+2.  **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 12 ayat (2)**: Dalam hal disyaratkan masa percobaan kerja, maka masa percobaan kerja yang disyaratkan tersebut **batal demi hukum** dan masa kerja tetap dihitung.
+3.  **Undang-Undang Nomor 13 Tahun 2003 Pasal 58 ayat (1)**: Perjanjian kerja untuk waktu tertentu tidak dapat mensyaratkan adanya masa percobaan kerja.
+4.  **Undang-Undang Nomor 13 Tahun 2003 Pasal 58 ayat (2)**: Dalam hal disyaratkan masa percobaan kerja, masa percobaan kerja yang disyaratkan **batal demi hukum**.
+
+**Kesimpulan:**
+Masa percobaan dalam PKWT adalah **ilegal**. Jika tetap dicantumkan dalam perjanjian, masa percobaan tersebut dianggap tidak berlaku (batal demi hukum), dan masa kerja pekerja dihitung sejak awal perjanjian tanpa pengurangan waktu.","Masa percobaan tidak boleh disyaratkan dalam PKWT. Jika masa percobaan tetap dicantumkan, masa percobaan tersebut batal demi hukum dan masa kerja pekerja tetap dihitung.",0.9612854552268981,excellent,,1,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 12 | PP Nomor 35 Tahun 2021.pdf | Pasal 12"
+Q08,Waktu kerja,Sebutkan dua pola waktu kerja yang diatur dalam PP 35 Tahun 2021 untuk 6 hari kerja dan 5 hari kerja dalam seminggu.,"Berdasarkan **Peraturan Pemerintah Nomor 35 Tahun 2021 Pasal 21 ayat (2)**, terdapat dua pola waktu kerja sebagai berikut:
+
+1.  **Untuk 6 hari kerja dalam seminggu:** 7 (tujuh) jam per hari dan 40 (empat puluh) jam per minggu.
+2.  **Untuk 5 hari kerja dalam seminggu:** 8 (delapan) jam per hari dan 40 (empat puluh) jam per minggu.","Pola waktu kerja yang diatur adalah 7 jam sehari and 40 jam seminggu untuk 6 hari kerja dalam seminggu, atau 8 jam sehari and 40 jam seminggu untuk 5 hari kerja dalam seminggu.",0.968933048248291,excellent,,1,1,"Peraturan Pemerintah No. 35 Tahun 2021, Pasal 21 | PP Nomor 35 Tahun 2021.pdf | Pasal 21"
