@@ -13,11 +13,11 @@ Urutan pakai:
    data/processed_chunks_ringan_pasal_chroma_ready.json
    data/chroma_db
    data/bm25_index.pkl
-3. Jalankan notebook 04 untuk menghasilkan eval_outputs/rag_inference_results.csv.
-4. Jalankan notebook 05 untuk membuat tabel evaluasi dan plot.
+3. Jalankan notebook 04 kalau ingin chat/inference interaktif manual.
+4. Jalankan notebook 05 untuk batch inference ground truth, evaluasi, tabel, failure review, dan plot otomatis.
 
 Perintah push GitHub:
 
-git add ground_truth_eval_20.csv 04_inference_chat_eval_no_thinking.ipynb 05_evaluasi_otomatis_plot.ipynb eval_outputs
+git add data/ground_truth_eval_20.csv notebooks/04_inference_chat_eval_no_thinking.ipynb notebooks/05_evaluasi_otomatis_plot.ipynb data/eval_outputs
 git commit -m "add rag evaluation notebooks and ground truth"
 git push origin main
