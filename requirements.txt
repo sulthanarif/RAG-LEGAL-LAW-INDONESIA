@@ -14,12 +14,13 @@
 
 # Core RAG / LLM
 torch
-transformers
-huggingface-hub
+# Keep Transformers below 5 because sentence-transformers 3.4.1 requires it.
+transformers>=4.41.0,<5.0.0
+huggingface-hub<1.0.0
 accelerate
 bitsandbytes
 # Pin to avoid newer optional audio/video imports that can pull torchcodec.
-sentence-transformers
+sentence-transformers==3.4.1
 safetensors
 torchvision
 
@@ -54,4 +55,3 @@ python-dotenv
 
 # Local demo app
 flask
-
