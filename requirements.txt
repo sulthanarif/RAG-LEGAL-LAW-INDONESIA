@@ -14,11 +14,14 @@
 
 # Core RAG / LLM
 torch
-transformers>=4.40.0
+transformers
+huggingface-hub
 accelerate
 bitsandbytes
 # Pin to avoid newer optional audio/video imports that can pull torchcodec.
-sentence-transformers==3.4.1
+sentence-transformers
+safetensors
+torchvision
 
 # Vector database / retrieval
 chromadb
@@ -28,7 +31,7 @@ rank-bm25
 pymupdf
 pdfplumber
 docling
-paddlepaddle==3.2.0
+paddlepaddle
 paddleocr
 pillow
 pytesseract
@@ -51,3 +54,4 @@ python-dotenv
 
 # Local demo app
 flask
+
