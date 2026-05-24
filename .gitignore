@@ -20,6 +20,10 @@ ENV/
 # Jupyter
 .ipynb_checkpoints/
 
+# ignore all from colab folder 
+/colab/**
+
+
 # Raw legal documents and OCR outputs
 data/pdf_butuh_ocr/
 data/raw_text_paddle/
